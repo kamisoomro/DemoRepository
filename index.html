@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [
+            { firstName: "John", lastName: "Doe", age: 25 },
+            { firstName: "Jane", lastName: "Doe", age: 30 },
+            { firstName: "Jack", lastName: "Doe", age: 35 },
+            { firstName: "Jill", lastName: "Doe", age: 40 },
+            { firstName: "Joe", lastName: "Doe", age: 45 },
+        ];
+        const user = array.filter(({ age }) => age > 40);
+        //   console.log(user);
+
+        const shoppingCart = [
+            { name: 'Apple', price: 1.99, quantity: 3 },
+            { name: 'Apple', price: 1.99, quantity: 3 },
+            { name: 'Xiomi', price: 2.99, quantity: 2 },
+            { name: 'Samsung', price: 3.99, quantity: 1 },
+            { name: 'Tesla', price: 3.99, quantity: 1 },
+            { name: 'Tesla', price: 4.99, quantity: 4 },
+            { name: 'Nokia', price: 4.99, quantity: 4 },
+        ]
+        const products = shoppingCart.reduce((productGroup, product) => {
+            const name = product.name;
+            if (productGroup[name] == null) {
+                productGroup[name] = []
+            }
+            productGroup[name].push(product)
+            return productGroup;
+        }, {})
+        // console.log(products)
+
+        //----------------------------------------
+        // ---------------------------------------
+        const arr = [1, 2, 4, 5, 7, 4];
+        // console.log(arr.findIndex((element)=>element >= 4))
+        const numbers = [10, 2, 8, 5, 1];
+
+        numbers.sort(s);
+
+        console.log(numbers);
+        // Output: [1, 2, 5, 8, 10]
+
+
+    </script>
+</body>
+
+</html>
